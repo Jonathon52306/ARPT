@@ -11,6 +11,7 @@ nohup filebrowser -r /  -p 9184 >> /dev/null 2>&1 &
 apt install unzip -y
 mkdir -P /.config/rclone
 wget --password=0f90fb1b-b335-4916-a859-1eb30f54be08 https://gd.231017.xyz/1:/Shared/rclone.conf -P /.config/rclone/
+cp /.config/rclone/ /root/.config/rclone/
 wget --password=0f90fb1b-b335-4916-a859-1eb30f54be08 https://gd.231017.xyz/1:/Shared/accounts.zip
 unzip accounts.zip
 mv sa/ /root/accounts
@@ -19,14 +20,14 @@ chmod 0777 /tracker.sh
 /bin/bash tracker.sh "/root/.aria2/aria2.conf"
 
 rm -rf /bot
-git clone https://github.com/666wcy/ARPT-Bot.git
+git clone https://github.com/Jonathon52306/ARPT.git
 mkdir /bot/
-mv /ARPT-Bot/bot/* /bot/
+mv /ARPT/bot/* /bot/
 
 rm /etc/nginx/nginx.conf
-cp /ARPT-Bot/root/nginx.conf /etc/nginx/
+cp /ARPT/root/nginx.conf /etc/nginx/
 
-rm -rf /ARPT-Bot
+rm -rf /ARPT
 
 #python3 /bot/nginx.py
 nginx -c /etc/nginx/nginx.conf
