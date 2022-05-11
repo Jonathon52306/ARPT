@@ -19,9 +19,8 @@ wget git.io/tracker.sh
 chmod 0777 /tracker.sh
 /bin/bash tracker.sh "/root/.aria2/aria2.conf"
 
-rm -rf /bot
+
 git clone https://github.com/Jonathon52306/ARPT.git
-mkdir /bot/
 mv /ARPT/bot/* /bot/
 
 rm /etc/nginx/nginx.conf
